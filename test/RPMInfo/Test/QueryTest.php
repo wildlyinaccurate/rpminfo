@@ -9,10 +9,8 @@ class QueryTest extends \PHPUnit_Framework_TestCase
 
     public function testGetInfo()
     {
-        $rpm = exec('which rpm');
-
-        if ( ! $rpm) {
-            throw new \DomainException('Tests must be run on a system with `rpm` installed');
+        if ( ! exec('which rpm')) {
+            $this->markTestSkipped('Integration tests can only be run on systems with rpm');
         }
 
         // Makes the tests a little brittle, but better than relying on a
