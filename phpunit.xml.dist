@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit backupGlobals="false" bootstrap="vendor/autoload.php" colors="true">
+    <testsuites>
+        <testsuite name="RPMInfo Test Suite">
+            <directory suffix="Test.php">./test/RPMInfo/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/RPMInfo/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
